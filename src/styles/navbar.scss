@@ -1,0 +1,47 @@
+@mixin mobile {
+    @media screen and (max-width: 430px){
+        @content;
+    }
+}
+
+.Navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: red;
+    padding: 10px;
+
+    &__left{
+        &__search{
+            position: relative;
+
+            &--input{
+                background-color: rgb(250, 118, 118);
+                padding-left: 2rem;
+                margin-left: 3px;
+                
+                @include mobile {
+                    width: 50px;
+                }
+            }
+
+            &--icon{
+                position: absolute;
+                z-index: 10;
+                top: 5px;
+                left: 31px;
+                opacity: 0.3;
+            }
+        }
+    }
+}
+
+.White {
+    fill: whitesmoke;
+    color: whitesmoke;
+}
+
+.LinkStyle{
+    text-decoration: none;
+    color: whitesmoke;
+}

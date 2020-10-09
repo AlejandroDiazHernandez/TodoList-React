@@ -1,0 +1,34 @@
+@mixin mobile {
+    @media screen and (max-width: 430px){
+        @content;
+    }
+}
+
+.Completed{
+    &__container{
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        margin-left: 100px;
+
+        @include mobile{
+            margin: 0;
+            align-items: center;
+        }
+            &__list{
+                list-style-type: none;
+                &--li{
+                    text-align: left;
+                    background-color: rgb(255, 133, 175);
+                    border-radius: 10px;
+                    border: 2px solid red;
+                    margin: 5px;
+                    padding: 0.5rem 1rem;
+
+                    >h4{
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+}

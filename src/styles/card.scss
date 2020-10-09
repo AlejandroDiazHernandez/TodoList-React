@@ -1,0 +1,23 @@
+.Card{
+    &__form{
+        border: 2px solid rgb(243, 126, 31);
+        padding: 7px;
+
+        &--AddBtn{
+            background-color: red;
+            padding: 2px;
+            border-radius: 5px;
+        }
+        &--AddBtn:hover{
+            font-weight: bold;
+        }
+
+        &--DeleteBtn{
+            padding: 2px;
+            border-radius: 5px;  
+        }
+        &--DeleteBtn:hover{
+            font-weight: bold;
+        }
+    }
+}
